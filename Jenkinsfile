@@ -32,6 +32,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
+				sh "docker rmi kumarvmadhu/nodeapp_test:latest"
 				sh 'docker push kumarvmadhu/nodeapp_test:latest'
 			}
 		}
